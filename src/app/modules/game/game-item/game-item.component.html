@@ -1,0 +1,19 @@
+<div class="container col-xxl-8 px-3 px-md-0 mt-custom">
+    <div *ngIf="gameItem" class="row p-md-4 p-1 m-md-2 flex-lg-row-reverse align-items-center w-auto">
+        <div class="col-12 col-sm-8 col-lg-7 p-0 mx-auto m-md-0 border-custom">
+            <img src="{{gameItem.imagePath}}" alt="" class="mx-0 px-0 mx-lg-auto w-100 p-0 m-0 h-100" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-5 pt-5">
+            <h1 class="display-5 fw-bold mb-4" [defualtColor]="'black'" appBoxShadow>{{gameItem.title}}</h1>
+            <p class="lead">{{gameItem.text | dots:180:'...' }}
+            </p>
+            <div class="d-grid mt-5 gap-2 d-md-flex justify-content-md-start">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!gameItem" class="row text-danger">
+        منتظر بمانید...
+    </div>
+</div>
